@@ -118,25 +118,77 @@
     <main>
         <section class="section_content">   
             <div class="div_content">
-<ul class="ul_content">
-   <li class="li_content">
-    <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </li>
-   <li class="li_content">
+
        
-</li>
-<li class="li_content">
-       
-</li>
-<li class="li_content">
-       
-</li>
-<li class="li_content">
-       
-</li>
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <ul class="ul_content">
+        <li class="li_content">
+         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </li>
+        <li class="li_content">
+    </ul>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+    <ul class="ul_content">
+        <li class="li_content">
+         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </li>
+        <li class="li_content">
+            <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </li>
+           <li class="li_content">
+            <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </li>
+        <li class="li_content">
+    </ul>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <ul class="ul_content">
+        <li class="li_content">
+         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </li>
+        <li class="li_content">
+    </ul>
+</div>
+
 </ul>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
     </main>
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        </script>
 </body>
 </html>
