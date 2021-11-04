@@ -120,44 +120,54 @@
             <div class="div_content">
 
        
-<button class="accordion">Section 1</button>
+<button class="accordion">Курорт Боин</button>
 <div class="panel">
-    <ul class="ul_content">
-        <li class="li_content">
-         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </li>
-        <li class="li_content">
-    </ul>
+    <div class="slideshow-container">
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <div class="mySlides fade">
+      
+          <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+        
+        <div class="mySlides fade">
+      
+          <iframe width="560" height="315" src="https://cdn23.fzhost.xyz/hostz/heco/Resort%20Boin%2002_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+        </div>
+        
+        <div class="mySlides fade">
+    
+         <a href=""><iframe width="560" height="315" src="https://cdn12.fzhost.xyz/hostz/heco/Resort%20Boin%2003_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;autoplay:none; picture-in-picture" allowfullscreen></iframe></a> 
+     
+        </div>
+        
+       
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
 </div>
 
 <button class="accordion">Section 2</button>
 <div class="panel">
-    <ul class="ul_content">
-        <li class="li_content">
-         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </li>
-        <li class="li_content">
-            <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           </li>
-           <li class="li_content">
-            <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           </li>
-        <li class="li_content">
-    </ul>
+
 </div>
 
 <button class="accordion">Section 3</button>
 <div class="panel">
-    <ul class="ul_content">
-        <li class="li_content">
-         <iframe width="560" height="315" src="https://cdn11.fzhost.xyz/hostz/heco/Resort%20Boin%2001_2007_dub.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </li>
-        <li class="li_content">
-    </ul>
-</div>
+ 
 
-</ul>
-            </div>
+
+
+          
         </section>
 
 
@@ -190,5 +200,36 @@
             });
         }
         </script>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+            
 </body>
 </html>
