@@ -1,6 +1,7 @@
 
 body{
     height: 100%;
+    background-color:#000;
     }
     
     .all-section{
@@ -283,7 +284,7 @@ body{
     }
     
     .accordion {
-        background-color: #eee;
+        background-color: rgb(211, 209, 209);
         color: #444;
         cursor: pointer;
         padding: 18px;
@@ -294,10 +295,12 @@ body{
         font-size: 15px;
         transition: 0.4s;
         text-align: center;
+       margin: 5px 0 5px 0;
+   
     }
     
     .active, .accordion:hover {
-        background-color: #ccc; 
+        background-color: rgb(105, 105, 105); 
     }
     
     .panel {
