@@ -1,19 +1,18 @@
-h1,h2{
+h1,
+h2 {
     text-align: center;
 }
 
-div{
-   
+div {
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
-display: flex;
+    display: flex;
     justify-content: center;
-  
+
 }
 
-iframe{
-    margin:  0 0 10px 0;
+iframe {
+    margin: 0 0 10px 0;
 }
-
-
