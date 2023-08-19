@@ -1,19 +1,258 @@
-h1,
-h2 {
-    text-align: center;
+/* Общие стили для всей страницы */
+html body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #747474;
+}
+ 
+/* Стили для заголовка */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
-div {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-
+/* Стили для навигации */
+nav {
+  background-color: #333;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 
+/* Стили для секций */
+section {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Стили для подвала */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: sticky;
+}
+
+/* Стили для карточек */
+.card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.card {
+  overflow: hidden;
+  width: calc(10% - 20px);
+  background-color: #b6b6b6;
+  border: 1px solid #747474;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  width: 150px;
+  height: 100px;
+}
+
+.card img {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
+.card:nth-child(1) {
+  background-size: 440px;
+  background-repeat: no-repeat;
+}
+.card:nth-child(2) {
+  background-image: url("путь_к_изображению2.jpg");
+}
+.card:nth-child(3) {
+  background-image: url("путь_к_изображению1.jpg");
+}
+.card:nth-child(4) {
+  background-image: url("путь_к_изображению2.jpg");
+}
+.card:nth-child(5) {
+  background-image: url("путь_к_изображению1.jpg");
+}
+.card:nth-child(6) {
+  background-image: url("путь_к_изображению2.jpg");
+}
+.card:nth-child(7) {
+  background-image: url("путь_к_изображению1.jpg");
+}
+.card:nth-child(8) {
+  background-image: url("путь_к_изображению2.jpg");
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.section-3 ul {
+  display: flex;
+}
+
+/* Адаптивные стили для телефонов */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 10% 10%;
+  }
+}
+
+/* видео */
+
+.video{
+
+}
 iframe {
-    margin: 0 0 10px 0;
+ 
+  width: 450px;
+  height: 250px;
 }
 
+.ul-alfavit {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ul-alfavit li {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+}
+
+#Time li {
+  display: flex;
+  width: auto;
+}
+
+.Time ul {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #333;
+}
+
+/* Стили для секций */
+section {
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+section strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Выравнивание контента внутри тега section */
+section > ul > li {
+  display: flex;
+  flex-direction: column;
+}
+
+section ul ul {
+  margin-left: 20px;
+}
+
+/* Добавление границ между списками */
+section ul ul,
+section ul li {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Отступы для времен внутри списка */
+section ul ul li {
+  margin-left: 10px;
+}
+
+section img {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 580px;
+}
+
+#All-Time div {
+  width: 70%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+#All-Time img {
+  min-width: 300px;
+  max-width: 100%;
+}
+
+button {
+  display: inline-block;
+  margin: 3px 2px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.table{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.table ul{
+  margin-bottom: 25px;
+display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
