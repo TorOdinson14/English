@@ -59,7 +59,7 @@ section {
     padding: 10px;
     background-color: #2a2a2a; /* Тёмный фон секций */
     border-radius: 5px;
-    width: 90%; /* Ширина секции на всю страницу */
+    width: 100%; /* Ширина секции на всю страницу */
 }
 
 /* Стили для заголовков и параграфов */
@@ -144,7 +144,7 @@ footer {
     padding: 0;
     margin: 0 20px;
     /* Отступ между списками */
-    width: 30%;
+    width: 50%;
 }
 
 #Theme ul li {
@@ -168,5 +168,5 @@ footer {
 
 
 #resurse{
-width: 200px;
+width: 100%;
 }
