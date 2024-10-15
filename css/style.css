@@ -9,29 +9,38 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    background-color: #1a1a1a; /* Тёмный фон страницы */
-    color: #e0e0e0; /* Светлый текст */
+    background-color: #1a1a1a;
+    /* Тёмный фон страницы */
+    color: #e0e0e0;
+    /* Светлый текст */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем контент по горизонтали */
+    align-items: center;
+    /* Центрируем контент по горизонтали */
 
 }
 
 main {
     width: 100%;
-    max-width: 1200px; /* Ограничиваем ширину контента */
-    padding-left: 20px; /* Добавляем отступ слева */
-    padding-right: 20px; /* Добавляем отступ справа */
+    max-width: 1200px;
+    /* Ограничиваем ширину контента */
+    padding-left: 20px;
+    /* Добавляем отступ слева */
+    padding-right: 20px;
+    /* Добавляем отступ справа */
 }
 
 
 /* Стили для шапки */
 header {
-    background-color: #333; /* Тёмный фон шапки */
-    color: #f0f0f0; /* Светлый текст шапки */
+    background-color: #333;
+    /* Тёмный фон шапки */
+    color: #f0f0f0;
+    /* Светлый текст шапки */
     padding: 10px 0;
     text-align: center;
-    width: 100%; /* Ширина шапки на всю страницу */
+    width: 100%;
+    /* Ширина шапки на всю страницу */
 }
 
 header nav ul {
@@ -46,34 +55,48 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #f0f0f0; /* Светлый текст для ссылок в шапке */
+    color: #f0f0f0;
+    /* Светлый текст для ссылок в шапке */
     text-decoration: none;
     font-size: 18px;
 }
 
 header nav ul li a:hover {
-    color: #1e90ff; /* Яркий акцент при наведении */
+    color: #1e90ff;
+    /* Яркий акцент при наведении */
 }
 
 /* Стили для секций */
 section {
     margin: 20px 0;
     padding: 10px;
-    background-color: #2a2a2a; /* Тёмный фон секций */
+    background-color: #2a2a2a;
+    /* Тёмный фон секций */
     border-radius: 5px;
-    width: 100%; /* Ширина секции на всю страницу */
+    width: 100%;
+    /* Ширина секции на всю страницу */
 }
 
 /* Стили для заголовков и параграфов */
-h1, h2, p, b {
+h1,
+h2,
+p,
+b {
     margin: 20px 0;
-    text-align: left; /* Выравнивание по левому краю */
-    padding-left: 20px; /* Добавляем отступ слева */
-    padding-right: 20px; /* Добавляем отступ справа */
+    text-align: left;
+    /* Выравнивание по левому краю */
+    padding-left: 20px;
+    /* Добавляем отступ слева */
+    padding-right: 20px;
+    /* Добавляем отступ справа */
 }
-
-h1, h2 {
-    color: #1e90ff; /* Яркий синий цвет для заголовков */
+h1{
+    text-align: center;
+}
+h1,
+h2 {
+    color: #1e90ff;
+    /* Яркий синий цвет для заголовков */
 }
 
 /* Стили для списков */
@@ -81,28 +104,34 @@ ul {
     list-style: none;
     margin: 10px 0;
     padding: 10px;
-    background-color: #333; /* Тёмный фон для списков */
+    background-color: #333;
+    /* Тёмный фон для списков */
     border-radius: 5px;
-    border: 1px solid #444; /* Чёткий контур */
+    border: 1px solid #444;
+    /* Чёткий контур */
 }
 
 ul li {
     margin: 5px 0;
     padding-left: 20px;
+ 
 }
 
 ul li a {
-    color: #1e90ff; /* Яркий синий для ссылок */
+    color: #1e90ff;
+    /* Яркий синий для ссылок */
     text-decoration: none;
     font-size: 16px;
 }
 
 ul li a:hover {
-    color: #00bfff; /* Ещё ярче при наведении */
+    color: #00bfff;
+    /* Ещё ярче при наведении */
     text-decoration: underline;
 }
-ul h2{
-   text-align: center;
+
+ul h2 {
+    text-align: center;
 }
 
 /* Стили для футера */
@@ -127,48 +156,35 @@ footer {
         font-size: 14px;
     }
 
-    h1, h2, p, b {
-        padding-left: 10px; /* Уменьшаем отступ на маленьких экранах */
+    h1,
+    h2,
+    p,
+    b {
+        padding-left: 10px;
+        /* Уменьшаем отступ на маленьких экранах */
         padding-right: 10px;
     }
 }
+
 #Theme {
-    display: flex;
+
     /* Включаем флекс для секции, чтобы ul были расположены горизонтально */
-    justify-content: space-between;
+
     /* Равномерное распределение ul по горизонтали */
 
 }
 
 #Theme ul {
+    display: flex;
+    justify-content: space-around;
     list-style: none;
     /* Убираем маркеры списка */
     padding: 0;
-    margin: 0 20px;
+ 
     /* Отступ между списками */
-    width: 50%;
-}
-
-#Theme ul li {
-    margin-bottom: 10px;
-    /* Отступ между элементами списка */
-}
-
-#Theme ul li a {
-    text-decoration: none;
-    /* Убираем подчеркивание ссылок */
-    color: #1e90ff;
-    /* Цвет ссылок */
-}
-
-#Theme ul li a:hover {
-    color: #00bfff;
-    /* Изменение цвета при наведении */
-    text-decoration: underline;
-    /* Подчеркивание при наведении */
 }
 
 
-#resurse{
-width: 100%;
-}
+
+
+
