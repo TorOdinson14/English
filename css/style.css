@@ -149,7 +149,7 @@ footer {
 /* Кросс-платформенные стили для мобильных устройств */
 @media only screen and (max-width: 600px) {
     header nav ul {
-        flex-direction: column;
+     
     }
 
     ul li a {
