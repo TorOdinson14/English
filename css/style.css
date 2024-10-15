@@ -1,258 +1,152 @@
-/* Общие стили для всей страницы */
-html body {
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #747474;
+/* Общие стили для кросс-платформенности */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
- 
-/* Стили для заголовка */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #1a1a1a; /* Тёмный фон страницы */
+    color: #e0e0e0; /* Светлый текст */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем контент по горизонтали */
+
+}
+
+main {
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем ширину контента */
+    padding-left: 20px; /* Добавляем отступ слева */
+    padding-right: 20px; /* Добавляем отступ справа */
+}
+
+/* Стили для шапки */
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
+    background-color: #333; /* Тёмный фон шапки */
+    color: #f0f0f0; /* Светлый текст шапки */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* Ширина шапки на всю страницу */
 }
 
-/* Стили для навигации */
-nav {
-  background-color: #333;
-  color: white;
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f0f0f0; /* Светлый текст для ссылок в шапке */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #1e90ff; /* Яркий акцент при наведении */
+}
+
+/* Стили для секций */
+section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #2a2a2a; /* Тёмный фон секций */
+    border-radius: 5px;
+    width: 90%; /* Ширина секции на всю страницу */
+}
+
+/* Стили для заголовков и параграфов */
+h1, h2, p, b {
+    margin: 20px 0;
+    text-align: left; /* Выравнивание по левому краю */
+    padding-left: 20px; /* Добавляем отступ слева */
+    padding-right: 20px; /* Добавляем отступ справа */
+}
+
+h1, h2 {
+    color: #1e90ff; /* Яркий синий цвет для заголовков */
+}
+
+/* Стили для списков */
 ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-li {
-  display: inline-block;
-  margin-right: 20px;
-}
-a {
-  text-decoration: none;
-  color: white;
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #333; /* Тёмный фон для списков */
+    border-radius: 5px;
+    border: 1px solid #444; /* Чёткий контур */
 }
 
-/* Стили для секций */
-section {
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
+ul li {
+    margin: 5px 0;
 }
 
-/* Стили для подвала */
+ul li a {
+    color: #1e90ff; /* Яркий синий для ссылок */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #00bfff; /* Ещё ярче при наведении */
+    text-decoration: underline;
+}
+
+/* Стили для футера */
 footer {
-  margin-top: auto;
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  position: sticky;
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#Theme {
+    display: flex; /* Включаем флекс для секции, чтобы ul были расположены горизонтально */
+    justify-content: space-between; /* Равномерное распределение ul по горизонтали */
 }
 
-/* Стили для карточек */
-.card-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
+#Theme ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0 20px; /* Отступ между списками */
+    width: 200px;
 }
 
-.card {
-  overflow: hidden;
-  width: calc(10% - 20px);
-  background-color: #b6b6b6;
-  border: 1px solid #747474;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  width: 150px;
-  height: 100px;
+#Theme ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
 }
 
-.card img {
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  height: 100%;
-  display: block;
+#Theme ul li a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #1e90ff; /* Цвет ссылок */
 }
 
-.card:nth-child(1) {
-  background-size: 440px;
-  background-repeat: no-repeat;
-}
-.card:nth-child(2) {
-  background-image: url("путь_к_изображению2.jpg");
-}
-.card:nth-child(3) {
-  background-image: url("путь_к_изображению1.jpg");
-}
-.card:nth-child(4) {
-  background-image: url("путь_к_изображению2.jpg");
-}
-.card:nth-child(5) {
-  background-image: url("путь_к_изображению1.jpg");
-}
-.card:nth-child(6) {
-  background-image: url("путь_к_изображению2.jpg");
-}
-.card:nth-child(7) {
-  background-image: url("путь_к_изображению1.jpg");
-}
-.card:nth-child(8) {
-  background-image: url("путь_к_изображению2.jpg");
+#Theme ul li a:hover {
+    color: #00bfff; /* Изменение цвета при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+/* Кросс-платформенные стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
 
-.section-3 ul {
-  display: flex;
-}
+    ul li a {
+        font-size: 14px;
+    }
 
-/* Адаптивные стили для телефонов */
-@media screen and (max-width: 480px) {
-  .card {
-    width: 10% 10%;
-  }
-}
-
-/* видео */
-
-.video{
-
-}
-iframe {
- 
-  width: 90%;
-  height: 250px;
-}
-
-.ul-alfavit {
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ul-alfavit li {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  width: 100%;
-}
-
-#Time li {
-  display: flex;
-  width: auto;
-}
-
-.Time ul {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  display: flex;
-  text-align: left;
-  flex-wrap: wrap;
-  border-bottom: solid 1px #333;
-}
-
-/* Стили для секций */
-section {
-  text-align: left;
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
-
-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-section li {
-  margin-bottom: 10px;
-}
-
-section strong {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Выравнивание контента внутри тега section */
-section > ul > li {
-  display: flex;
-  flex-direction: column;
-}
-
-section ul ul {
-  margin-left: 20px;
-}
-
-/* Добавление границ между списками */
-section ul ul,
-section ul li {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
-}
-
-/* Отступы для времен внутри списка */
-section ul ul li {
-  margin-left: 10px;
-}
-
-section img {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 580px;
-}
-
-#All-Time div {
-  width: 70%;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-#All-Time img {
-  min-width: 300px;
-  max-width: 100%;
-}
-
-button {
-  display: inline-block;
-  margin: 3px 2px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  background-color: #3498db;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #2980b9;
-}
-
-.table{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.table ul{
-  margin-bottom: 25px;
-display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+    h1, h2, p, b {
+        padding-left: 10px; /* Уменьшаем отступ на маленьких экранах */
+        padding-right: 10px;
+    }
 }
