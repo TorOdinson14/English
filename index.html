@@ -20,8 +20,37 @@
     </header>
 
     <section id="Theme">
-        <h2>темы А1</h2>
+        <style>
+            #Theme {
+    display: flex; /* Включаем флекс для секции, чтобы ul были расположены горизонтально */
+    justify-content: space-between;/* Равномерное распределение ul по горизонтали */
+
+}
+
+#Theme ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0 20px; /* Отступ между списками */
+    width: 30%;
+}
+
+#Theme ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+#Theme ul li a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #1e90ff; /* Цвет ссылок */
+}
+
+#Theme ul li a:hover {
+    color: #00bfff; /* Изменение цвета при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+        </style>
+       
         <ul>
+            <h2>темы А1</h2>
             <li><a href="alfofit.Html">Алфовит</a></li>
 
             <li><a href="fonems.Html">фонемы</a></li>

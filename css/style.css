@@ -109,31 +109,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
-#Theme {
-    display: flex; /* Включаем флекс для секции, чтобы ul были расположены горизонтально */
-    justify-content: space-between; /* Равномерное распределение ul по горизонтали */
-}
 
-#Theme ul {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0;
-    margin: 0 20px; /* Отступ между списками */
-    width: 200px;
-}
-
-#Theme ul li {
-    margin-bottom: 10px; /* Отступ между элементами списка */
-}
-
-#Theme ul li a {
-    text-decoration: none; /* Убираем подчеркивание ссылок */
-    color: #1e90ff; /* Цвет ссылок */
-}
-
-#Theme ul li a:hover {
-    color: #00bfff; /* Изменение цвета при наведении */
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
 
 /* Кросс-платформенные стили для мобильных устройств */
 @media only screen and (max-width: 600px) {
