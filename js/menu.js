@@ -9,67 +9,6 @@ function closeNav() {
 }
 
 // Функция для загрузки содержимого
-function loadContent(page) {
-    fetch(page)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('Theme').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-            document.getElementById('Theme').innerHTML = '<p>Ошибка загрузки содержимого.</p>';
-        });
-}
-
-// Добавляем событие для кнопки меню
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('menu-btn').onclick = function() {
-        document.getElementById('sidebar').classList.toggle('active');
-    };
-});
-
-// Функция для открытия и закрытия подменю
-function toggleSubmenu() {
-    const submenu = document.getElementById('submenu');
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-}
-function loadContent(page) {
-    fetch(page)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('Theme').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-            document.getElementById('Theme').innerHTML = '<p>Ошибка загрузки содержимого.</p>';
-        });
-}
-function loadContent(page) {
-    fetch(page)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('Theme').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-            document.getElementById('Theme').innerHTML = '<p>Ошибка загрузки содержимого.</p>';
-        });
-}
 function loadContent(element) {
     const page = element.getAttribute('data-page'); // Получаем имя файла из data-page
     fetch(page)
@@ -87,3 +26,34 @@ function loadContent(element) {
             document.getElementById('Theme').innerHTML = '<p>Ошибка загрузки содержимого.</p>';
         });
 }
+
+// Обработчики событий для свайпа
+let startX, endX;
+
+document.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Запоминаем начальную координату X
+}, false);
+
+document.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX; // Запоминаем конечную координату X
+}, false);
+
+document.addEventListener('touchend', () => {
+    const threshold = 50; // Минимальное расстояние для свайпа
+
+    if (startX - endX > threshold) {
+        // Если свайп влево, закрываем сайдбар
+        closeNav();
+    } else if (endX - startX > threshold) {
+        // Если свайп вправо, открываем сайдбар
+        openNav();
+    }
+}, false);
+
+// Добавляем событие для кнопки меню
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('menu-btn').onclick = function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active'); // Переключаем класс активного состояния
+    };
+});
