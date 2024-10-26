@@ -4,12 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Learning latform</title>
+    <title>English Learning Platform</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
+        <!-- 1. Кнопка для бокового меню -->
+        <button id="menu-btn">&#9776; Меню</button>
+
+        <!-- 2. Боковая панель -->
+        <div id="sidebar" class="sidebar">
+            <h2>Темы</h2>
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <div>
+                <!-- 3. Кнопка для открытия подменю -->
+                <button class="toggle-button" onclick="toggleSubmenu()">Основы A1</button>
+                <!-- 4. Подменю -->
+                <div class="submenu" id="submenu">
+                    <ul> <!-- Используем неупорядоченный список -->
+                        <li><a href="javascript:void(0)" onclick="loadContent('alfofit.html')">1. Алфавит</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadContent('fonems.html')">2. Фонемы</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadContent('SlGlagol.html')">3. Словарь Глаголов</a>
+                        </li>
+                        <li><a href="javascript:void(0)" onclick="loadContent('SlSushestvitelnye.html')">4. Словарь
+                                Существительных</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <h1>Учите английский легко</h1>
         <nav>
             <ul>
@@ -20,57 +44,12 @@
             </ul>
         </nav>
     </header>
-    <!-- -------------- -->
-    <!-- -------------- --><!-- -------------- -->
+
     <section id="Theme">
-  <h3>Основы для А1</h3>
-        <ul>
-            <li><a href="alfofit.Html">Алфовит</a></li>
-            <li><a href="fonems.Html">фонемы</a></li>
-            <li><a href="SlGlagol.Html">Словарь Глаголов</a></li>
-            <li><a href="SlSushestvitelnye.Html">Словарь Существительных</a></li>
-        </ul>
-
-    </section>
-    <!------------------>
-    <!------------------>
-    <!------------------>
-
-    <section id="resurse">
-        <ul>
-            <h2>темы А1</h2>
-            <li><a href="alfofit.Html">Алфовит</a></li>
-
-            <li><a href="fonems.Html">фонемы</a></li>
-            <li><a href="SlGlagol.Html">Словарь Глаголов</a></li>
-            <li><a href="SlSushestvitelnye.Html">Словарь Существительных</a></li>
-        </ul>
+        <!-- 5. Здесь будет загружаться содержимое -->
     </section>
 
-
-    <section id="plan">
-        <h2>План изучения</h2>
-        <ul>
-
-            <li><a href="level-a1.html">Уровень A1</a></li>
-            <li><a href="level-a2.html">Уровень A2</a></li>
-            <li><a href="level-b1.html">Уровень B1</a></li>
-        </ul>
-    </section>
-
-    <section id="resources">
-        <h2>Ресурсы для обучения</h2>
-        <ul>
-            <li><a href="https://www.duolingo.com">Duolingo</a></li>
-            <li><a href="https://lingualeo.com">LinguaLeo</a></li>
-            <li><a href="https://www.youtube.com/c/RachelsEnglish">YouTube канал "Rachel's English"</a></li>
-            <li><a href="https://www.bbc.co.uk/learningenglish">BBC Learning English</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Контакты и поддержка: <a href="mailto:support@englishplatform.com">support@englishplatform.com</a></p>
-    </footer>
+    <script src="menu.js"></script>
 </body>
 
 </html>
