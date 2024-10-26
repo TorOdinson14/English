@@ -27,6 +27,12 @@ function loadContent(element) {
         });
 }
 
+// Функция для открытия и закрытия подменю
+function toggleSubmenu() {
+    const submenu = document.getElementById('submenu');
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
 // Обработчики событий для свайпа
 let startX, endX;
 

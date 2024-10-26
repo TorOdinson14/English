@@ -19,10 +19,11 @@
                 <button class="toggle-button" onclick="toggleSubmenu()">Основы A1</button>
                 <div class="submenu" id="submenu">
                     <ul>
-                        <li><a href="javascript:void(0)" data-page="alfofit.html" onclick="loadContent(this)">1. Алфавит</a></li>
+                        <li><a href="javascript:void(0)" data-page="alfofvit.html" onclick="loadContent(this)">1. Алфавит</a></li>
                         <li><a href="javascript:void(0)" data-page="fonem.html" onclick="loadContent(this)">2. Фонемы</a></li>
                         <li><a href="javascript:void(0)" data-page="glag.html" onclick="loadContent(this)">3. Глаголы</a></li>
-                        <li><a href="javascript:void(0)" data-page="sush.html" onclick="loadContent(this)">4. Существительные</a></li>
+                        <li><a href="javascript:void(0)" data-page="sush.html" onclick="loadContent(this)">4. Существительныe</a></li>
+                        
                         <li><a href="javascript:void(0)" data-page="text-a1.html" onclick="loadContent(this)">5. text-a1</a></li>
                     </ul>
                 </div>
@@ -45,31 +46,11 @@
     </section>
 
     <script src="js/menu.js"></script>
-
-    <script>
-        // Обработчики событий для свайпа
-        let startX, endX;
-
-        document.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX; // Запоминаем начальную координату X
-        }, false);
-
-        document.addEventListener('touchmove', (e) => {
-            endX = e.touches[0].clientX; // Запоминаем конечную координату X
-        }, false);
-
-        document.addEventListener('touchend', () => {
-            const threshold = 50; // Минимальное расстояние для свайпа
-
-            if (startX - endX > threshold) {
-                // Если свайп влево, закрываем сайдбар
-                closeNav();
-            } else if (endX - startX > threshold) {
-                // Если свайп вправо, открываем сайдбар
-                openNav();
-            }
-        }, false);
-    </script>
 </body>
 
 </html>
+<div id="sidebar" class="sidebar">
+    <button onclick="closeNav()">Close</button>
+    <!-- Ваше содержимое сайдбара -->
+</div>
+<button id="menu-btn" onclick="openNav()">Open Menu</button>
