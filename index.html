@@ -10,25 +10,19 @@
 
 <body>
     <header>
-        <!-- 1. Кнопка для бокового меню -->
         <button id="menu-btn">&#9776; Меню</button>
 
-        <!-- 2. Боковая панель -->
         <div id="sidebar" class="sidebar">
             <h2>Темы</h2>
             <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
             <div>
-                <!-- 3. Кнопка для открытия подменю -->
                 <button class="toggle-button" onclick="toggleSubmenu()">Основы A1</button>
-                <!-- 4. Подменю -->
                 <div class="submenu" id="submenu">
-                    <ul> <!-- Используем неупорядоченный список -->
+                    <ul>
                         <li><a href="javascript:void(0)" onclick="loadContent('alfofit.html')">1. Алфавит</a></li>
                         <li><a href="javascript:void(0)" onclick="loadContent('fonems.html')">2. Фонемы</a></li>
-                        <li><a href="javascript:void(0)" onclick="loadContent('SlGlagol.html')">3. Словарь Глаголов</a>
-                        </li>
-                        <li><a href="javascript:void(0)" onclick="loadContent('SlSushestvitelnye.html')">4. Словарь
-                                Существительных</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadContent('SlGlagol.html')">3. Словарь Глаголов</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadContent('SlSushestvitelnye.html')">4. Словарь Существительных</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,10 +40,10 @@
     </header>
 
     <section id="Theme">
-        <!-- 5. Здесь будет загружаться содержимое -->
+        <!-- Здесь будет загружаться содержимое -->
     </section>
 
-    <script src="menu.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

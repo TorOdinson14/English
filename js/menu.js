@@ -29,7 +29,6 @@ function loadContent(page) {
 // Добавляем событие для кнопки меню
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('menu-btn').onclick = function() {
-        // Открываем или закрываем боковую панель
         document.getElementById('sidebar').classList.toggle('active');
     };
 });
