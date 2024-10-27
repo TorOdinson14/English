@@ -34,6 +34,7 @@ header {
 
 header h1 {
     margin: 0;
+    margin-left: 100px;
     font-size: 24px;
 }
 
@@ -55,10 +56,10 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-
 header nav ul li {
-    margin: 0 15px;
+    margin: -14px 10px;
 }
 
 header nav ul li a {
@@ -109,7 +110,7 @@ section {
 
 /* Уменьшенный размер шрифта для боковой панели */
 .sidebar a {
-    text-decoration: ;
+
     font-size: 20x; /* Уменьшенный шрифт */
     color: #f0f0f0;
     display: block;
@@ -225,4 +226,48 @@ footer {
 .toggle-button:hover {
     color: #1e90ff; /* Цвет при наведении */
 }
- 
+ /* Стили для навигации */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    display: block;
+}
+
+/* Стили для выпадающего списка */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5f5959;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 254, 254);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Отображение списка при наведении */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
