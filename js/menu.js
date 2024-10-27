@@ -63,3 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active'); // Переключаем класс активного состояния
     };
 });
+
+// Функция для открытия и закрытия подменю
+function toggleSubmenu(submenuId) {
+    const submenu = document.getElementById(submenuId);
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
