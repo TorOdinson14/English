@@ -232,10 +232,11 @@ footer {
 /* Стили для телефонов */
 @media (max-width: 600px) {
 header h1{
-  margin-left: 50px;
+  margin-left: 40px;
 
 }
     .sidebar h2 {
+        margin-top: 215px;
         margin-bottom: 30px;
     }
 
@@ -253,17 +254,17 @@ header h1{
     }
 
     header nav ul {
+        width: 99%;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-content: flex-end;
-        justify-content: center;
-        margin-left: 70px;
+        justify-content: flex-start;
+        margin-left: 0px;
     }
-
     header nav ul li {
-        width: 100px;
+        width: 30%;
         padding: 15px;
     }
 
