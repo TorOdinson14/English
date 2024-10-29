@@ -254,14 +254,12 @@ header h1{
     }
 
     header nav ul {
-        width: 99%;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-content: flex-end;
-        justify-content: flex-start;
-        margin-left: 0px;
+        justify-content: space-around;
     }
     header nav ul li {
         width: 30%;
