@@ -345,3 +345,9 @@ nav ul li a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+.box {
+display: block;
+display: flex;
+}
